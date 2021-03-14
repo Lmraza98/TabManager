@@ -1,4 +1,0 @@
-
-> javascript-boilerplate@1.0.0 watch /Users/lucasraza/Desktop/Tab 
-> cross-env NODE_ENV=development rollup -w -c
-
