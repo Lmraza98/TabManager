@@ -1,27 +1,41 @@
 {
-  "name": "javascript-boilerplate",
-  "version": "1.0.0",
+  "name": "chrome-tab-manager",
   "private": true,
-  "description": "This Chrome Extension boilerplate supports modern, modular JavaScript and automatic reloading during development.",
-  "license": "MIT",
-  "author": {
-    "name": "Jack Steam",
-    "email": "jacksteamdev@gmail.com"
-  },
   "scripts": {
-    "build": "cross-env NODE_ENV=production rollup -c",
-    "watch": "cross-env NODE_ENV=development rollup -w -c"
-  },
-  "dependencies": {
-    "@types/chrome": "0.0.133"
+    "dev": "webpack --config webpack.dev.js",
+    "watch": "webpack --config webpack.dev.js --watch",
+    "prod": "webpack --config webpack.prod.js",
+    "mkdir:release": "npx mkdirp release",
+    "prerelease": "run-s mkdir:release prod",
+    "release": "node release $1"
   },
   "devDependencies": {
-    "cross-env": "^7.0.2",
-    "eslint": "^7.7.0",
-    "prettier": "^2.1.1",
-    "rollup": "^2.26.8",
-    "rollup-plugin-chrome-extension": "^3.3.0",
-    "rollup-plugin-empty-dir": "^1.0.4",
-    "rollup-plugin-zip": "^1.0.1"
+    "@babel/core": "^7.13.10",
+    "@babel/preset-env": "^7.13.10",
+    "babel-loader": "^8.2.2",
+    "bestzip": "^2.1.7",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^6.4.1",
+    "core-js": "^3.6.5",
+    "css-loader": "^3.6.0",
+    "jest": "^26.4.2",
+    "mkdirp": "^1.0.4",
+    "npm-run-all": "^4.1.5",
+    "path": "^0.12.7",
+    "regenerator-runtime": "^0.13.7",
+    "rimraf": "^3.0.2",
+    "sass": "^1.26.10",
+    "sass-loader": "^9.0.3",
+    "style-loader": "^1.2.1",
+    "terser-webpack-plugin": "^5.1.1",
+    "webpack": "^4.46.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-extension-reloader": "^1.1.4",
+    "webpack-merge": "^5.7.3"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "babel": "^6.23.0",
+    "moment": "^2.27.0"
   }
 }
