@@ -1,7 +1,7 @@
 # Chrome Extension Tab Manager
 
 <!-- [![](https://img.shields.io/badge/Fork%20on-CodeSandbox-blue)](https://githubbox.com/extend-chrome/javascript-boilerplate) -->
-[![GitHub last commit](https://img.shields.io/github/last-commit/extend-chrome/javascript-boilerplate.svg)](https://github.com/extend-chrome/rollup-plugin-javascript-boilerplate)
+[![GitHub last commit]](https://github.com/Lmraza98/TabManager)
 
 The goal of this project is to build a chrome-extension that will help delete browser tabs. Almost daily I find myself working with 30+ tabs open, it's ineffecient to have to go through an delete all of them. Given a speficied time limit, if the browser tab hasn't been interacted with the extension should exit out of the tab.
 
