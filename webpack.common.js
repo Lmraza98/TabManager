@@ -5,7 +5,7 @@ module.exports = {
   entry: {
     content: './src/content.js',
     background: './src/background.js',
-    options: './src/options.js',
+    options: './src/options.js'
   },
   plugins: [
     new CleanWebpackPlugin(),
@@ -20,7 +20,7 @@ module.exports = {
             ],
           },
         },
-        { from: 'src/options.html' },
+        { from: 'src/options.html' }
       ]
     }),
   ],

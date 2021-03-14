@@ -4,6 +4,7 @@ const common = require('./webpack.common.js');
 const ExtensionReloader = require('webpack-extension-reloader');
 
 module.exports = (env, argv) => {
+    console.log(argv)
   return merge(
     common,
     {
@@ -16,13 +17,13 @@ module.exports = (env, argv) => {
           manifest: path.resolve(__dirname, 'src', 'manifest.json'),
           entries: {
             contentScript: [
-              'content',
+              'content'
             ],
             background: [
               'background',
             ],
             extensionPage: [
-              'options',
+              'options'
             ],
           },
         })) : false,
